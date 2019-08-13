@@ -2,4 +2,4 @@
 
 sh ./build.sh
 
-docker push stephenneal/nginx-proxy:alpine-v1
+docker push stephenneal/python-aws:alpine-v1
