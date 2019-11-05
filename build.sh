@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-docker build -t stephenneal/python-aws:alpine-v1 ./alpine-v1/
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+docker build -t stephenneal/python-aws:alpine-v1 "${DIR}"/alpine-v1/
