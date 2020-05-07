@@ -1,5 +1,9 @@
 FROM python:3.8-alpine AS aws
 
-# Install requirements
+# Copy python dependencies list
 COPY requirements.txt ./requirements.txt
-RUN pip install -r ./requirements.txt && rm ./requirements.txt
+
+# Install requirements
+RUN pip install --upgrade pip \
+	&& pip install -r ./requirements.txt \
+	&& rm ./requirements.txt
