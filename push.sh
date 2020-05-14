@@ -6,3 +6,4 @@ sh "${DIR}"/build.sh
 
 docker push stephenneal/python-aws:3.7-alpine-v1
 docker push stephenneal/python-aws:3.8-alpine-v1
+docker push stephenneal/python-aws:3.8-alpine-v2
