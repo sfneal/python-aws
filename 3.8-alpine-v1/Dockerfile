@@ -1,4 +1,8 @@
-FROM python:3.8-alpine AS aws
+# Start with a small Alpine image
+FROM python:3.8-alpine
+
+# Update operating system
+RUN apk update
 
 # Copy python dependencies list
 COPY requirements.txt ./requirements.txt
