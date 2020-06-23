@@ -1,10 +1,17 @@
 # Start with a small Alpine image
 FROM python:3.9-rc-alpine
 
+# Update operating system & install GCC for
+RUN apk update \
+	&& apk add --no-cache --virtual \
+		gcc
+
+
 # Copy python dependencies list
 COPY ./scripts/ /
 
-# Install requirements
+# Install requirements & remove build deps
 RUN pip install --upgrade pip \
-	&& pip install -r ./requirements.txt \
+	&& pip install --no-cache-dir -r ./requirements.txt \
 	&& rm ./requirements.txt
+	&& apk del gcc
