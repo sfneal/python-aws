@@ -1,5 +1,5 @@
 # Start with release canidate buster image
-FROM python:3.9-rc-buster
+FROM python:3.10-rc-buster
 
 # Copy python dependencies list
 COPY ./scripts/ /

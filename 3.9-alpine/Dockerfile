@@ -1,5 +1,5 @@
 # Start with a small Alpine image
-FROM python:3.9-rc-alpine
+FROM python:3.9-alpine
 
 # Update operating system & install GCC for
 RUN apk update \
