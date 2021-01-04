@@ -3,8 +3,18 @@ language: ruby
 services:
   - docker
 
+env:
+  matrix:
+    - TAG=3.7-alpine-v1
+    - TAG=3.8-alpine-v1
+    - TAG=3.8-alpine-v2
+    - TAG=3.9-alpine
+    - TAG=3.9-buster
+    - TAG=3.10-rc-alpine
+    - TAG=3.10-rc-buster
+
 script:
-  - sh build.sh
+  - sh build.sh ${TAG}
 
 after_script:
   - docker images
