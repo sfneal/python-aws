@@ -4,6 +4,10 @@ services:
   - docker
 
 env:
+  global:
+    - secure: htFKzxiKVt9NcVVnCyDpMO0jQoO25xSUZ+hHjb5MmLX3BQ5/f7VKYJBm8Masz0OxElYA6vbAByyr+0wdLyTtBaWM/ZsLnyOW+GmjWnUf5jW0C+EcyPsqw33y6LwQNsYPirw1tVKVRqnZSPeyBU5p2aNyqF/4XFcW5s+1buG6uMfUvIf9oxCxHfNyDYcPflaf9surTmFZBKhyl59wITuP1dXCEhDP357AVOIj85olLcFrdriykpgynbTMoJvHCE/8qNF0Gx8/rWrZIcXsIfxN9AHiNLGUVqTa/5HiB2FmNp7mXTmh/HRJSJGVYwWYJPvlCaYp4Hxtk2qiagtd2XEuB/NqeSNTsr3GcFYvL+9a7l2HVnhO4YiYZ7Dc1zLxnQvnXGYt77gXhSU/ZA5oFeWclmALvi/Vy+fJMTLQGpfHMQODOS+dLM0OCsZRUmeNPNoGjyTq4LRGVbbkJJHF7vA6dM929IiJDo+RDHO2LbfxHAYihtrA4ChV9F6ejXk2HbPnhWy9Ad9plUiwSfBlyDKt3rSsjGNOc6tF2qJSj89IwypWYaulrwjPh/VE8H9YM/MG8LXC/VRnnYRRrPpJzgZSeTAxPXzUfj1VRKyLbxAQCLqbW65DGK+vmZnhXqqWibQ4vvaCRAijGBJ/l+Q1vb0aUJ+U7QfOi2VEF6plKmiozcE=
+    - secure: aXOK0eEbsXlFowj1SYv1DTWPv5w6JslhvsCl4K5Dpjbg+TjZPgkSJQWuonbgiRAMRj4wMCEzaqdaSK6wU0eJX0wPsoK/edNqkwIqwZ80wS6TXvXHvwjDIfnDkwdFKUxvYWpy2mzmkt9+MQLg7sVboyimihXPoPeeScyZAD7YHWTSqg1TdkcdAfFyVBfmRV5Ixe+8CQUd1J0p/avh29xqHbRc5jMdYbQ7fZ9W8qMbuaB7HiR6CmWypCIQ8QwWoOj+fCjVAUE/RlBq08KraaKBUBJBnEualbD/n0zwdJBaYP8tN8uadjCLkktNufUJipeu3KqP2tW2LNg02krZkSJZoIljfh8X43PNvNGjlt/ziUVn2e2XNg76NZCkzeuRDhCgIvTRbeZih8qxtP7TdaM2w43U2KXtdKuo8bj81potAKzrLpzem3REi4vp9AZ3TE3ekZ3jVO9fCZdsMPAywzrBfiXn/8MEqmFfHRwhPAlugNyrKLYBFms4aslvHn/XIu37CE8J0HWUY/szHXxGVkReX3KD7/KTYABm1ojCf2UTw9eENkbKjLAfnFBxEPK/bltYUjWu36eKbbVzN3ttcxxjp7vxrKguClSqa32tfN0EaYgRtxg08XbnzT8XA/lKIp5N3TQ84fbNqSCr9eoaPk8MPwyJR0/V73Q3zZBY51bR3+E=
+
   matrix:
     - TAG=3.7-alpine-v1
     - TAG=3.8-alpine-v1
@@ -12,6 +16,9 @@ env:
     - TAG=3.9-buster
     - TAG=3.10-rc-alpine
     - TAG=3.10-rc-buster
+
+before_script:
+  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
 
 script:
   - sh build.sh ${TAG}
