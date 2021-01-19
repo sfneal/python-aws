@@ -4,7 +4,7 @@
 [![Total Downloads](https://img.shields.io/docker/pulls/stephenneal/python-aws?style=flat-square)](https://hub.docker.com/r/stephenneal/python-aws)
 [![Latest Version](https://img.shields.io/docker/v/stephenneal/python-aws?sort=semver&style=flat-square)](https://hub.docker.com/r/stephenneal/python-aws)
 
-python-aws is a python-buster based image with the AWS CLI preinstalled.  Useful for silently adding AWS credentials to a Docker image without storing them in bash history 
+python-aws is a python-buster based image with the AWS CLI preinstalled.  Useful for silently adding AWS credentials to a Docker image without storing them in bash history. 
 
 ## Installation
 
