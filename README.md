@@ -1,4 +1,4 @@
-# stephenneal/python-aws
+# sfneal/python-aws
 
 [![Build Status](https://travis-ci.com/sfneal/python-aws.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/python-aws)
 [![Total Downloads](https://img.shields.io/docker/pulls/stephenneal/python-aws?style=flat-square)](https://hub.docker.com/r/stephenneal/python-aws)
