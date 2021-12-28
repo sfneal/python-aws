@@ -9,6 +9,8 @@ env:
     - secure: aXOK0eEbsXlFowj1SYv1DTWPv5w6JslhvsCl4K5Dpjbg+TjZPgkSJQWuonbgiRAMRj4wMCEzaqdaSK6wU0eJX0wPsoK/edNqkwIqwZ80wS6TXvXHvwjDIfnDkwdFKUxvYWpy2mzmkt9+MQLg7sVboyimihXPoPeeScyZAD7YHWTSqg1TdkcdAfFyVBfmRV5Ixe+8CQUd1J0p/avh29xqHbRc5jMdYbQ7fZ9W8qMbuaB7HiR6CmWypCIQ8QwWoOj+fCjVAUE/RlBq08KraaKBUBJBnEualbD/n0zwdJBaYP8tN8uadjCLkktNufUJipeu3KqP2tW2LNg02krZkSJZoIljfh8X43PNvNGjlt/ziUVn2e2XNg76NZCkzeuRDhCgIvTRbeZih8qxtP7TdaM2w43U2KXtdKuo8bj81potAKzrLpzem3REi4vp9AZ3TE3ekZ3jVO9fCZdsMPAywzrBfiXn/8MEqmFfHRwhPAlugNyrKLYBFms4aslvHn/XIu37CE8J0HWUY/szHXxGVkReX3KD7/KTYABm1ojCf2UTw9eENkbKjLAfnFBxEPK/bltYUjWu36eKbbVzN3ttcxxjp7vxrKguClSqa32tfN0EaYgRtxg08XbnzT8XA/lKIp5N3TQ84fbNqSCr9eoaPk8MPwyJR0/V73Q3zZBY51bR3+E=
 
   matrix:
+    - TAG=3.10-alpine
+    - TAG=3.10-buster
     - TAG=3.9-alpine
     - TAG=3.9-buster
     - TAG=3.8-alpine-v2
