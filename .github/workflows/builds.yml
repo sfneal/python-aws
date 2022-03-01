@@ -1,0 +1,37 @@
+name: Docker Build
+
+on: [push, pull_request]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                os: [ubuntu-latest]
+                tag: [
+                    3.7-alpine-v1,
+                    3.8-alpine-v1,
+                    3.8-alpine-v2,
+                    3.9-alpine,
+                    3.9-buster,
+                    3.10-alpine,
+                    3.10-buster,
+                    3.10-rc-alpine,
+                    3.10-rc-buster,
+                ]
+
+        name: TAG-${{ matrix.tag }}
+
+        steps:
+            -   name: Checkout code
+                uses: actions/checkout@v1
+
+            -   name: Authenticate Docker Hub
+                run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+            -   name: Build Docker Image
+                run: sh build.sh ${{ matrix.tag }}
+
+            -   name: Show Docker Images
+                run: docker images -a --filter='dangling=false' --format '{{.Repository}}:{{.Tag}}\t{{.Size}}'
