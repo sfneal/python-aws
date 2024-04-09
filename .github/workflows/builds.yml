@@ -10,9 +10,6 @@ jobs:
             matrix:
                 os: [ubuntu-latest]
                 tag: [
-                    3.7-alpine-v1,
-                    3.8-alpine-v1,
-                    3.8-alpine-v2,
                     3.9-alpine,
                     3.9-buster,
                     3.10-alpine,
@@ -30,7 +27,7 @@ jobs:
 
         steps:
             -   name: Checkout code
-                uses: actions/checkout@v1
+                uses: actions/checkout@v4
 
             -   name: Authenticate Docker Hub
                 run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username "${{ secrets.DOCKER_USERNAME }}" --password-stdin
