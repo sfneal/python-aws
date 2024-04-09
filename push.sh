@@ -28,4 +28,6 @@ if [ "$TAG" != null ]
     docker push stephenneal/python-aws:3.10-rc-buster
     docker push stephenneal/python-aws:3.11-alpine
     docker push stephenneal/python-aws:3.11-buster
+    docker push stephenneal/python-aws:3.12-alpine
+    docker push stephenneal/python-aws:3.12-buster
 fi
