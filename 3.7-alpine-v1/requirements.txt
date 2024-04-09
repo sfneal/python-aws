@@ -3,7 +3,7 @@ botocore==1.33.13
 colorama==0.4.4
 docutils==0.16
 jmespath==1.0.1
-pyasn1==0.5.1
+pyasn1==0.6.0
 python-dateutil==2.9.0.post0
 PyYAML==6.0.1
 rsa==4.7.2
