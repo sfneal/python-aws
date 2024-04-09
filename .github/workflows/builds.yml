@@ -21,6 +21,9 @@ jobs:
                     3.10-rc-buster,
                     3.11-alpine,
                     3.11-buster,
+                    3.12-alpine,
+                    3.12-bullseye,
+                    3.12-slim,
                 ]
 
         name: TAG-${{ matrix.tag }}
