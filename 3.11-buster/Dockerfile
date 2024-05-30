@@ -12,4 +12,5 @@ COPY ./ /
 # Install requirements
 RUN pip install --upgrade pip \
 	&& pip install awscli \
-	&& rm ./requirements.txt
+	&& rm ./requirements-base.txt \
+    && rm ./requirements.txt
