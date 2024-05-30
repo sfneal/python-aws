@@ -4,7 +4,9 @@ FROM python:3.12-alpine
 # Update operating system & install GCC for
 RUN apk update \
 	&& apk add --no-cache --virtual .build-deps \
-        gcc
+        gcc \
+    && apk add \
+      py3-six
 
 # Copy python dependencies list
 COPY ./ /
