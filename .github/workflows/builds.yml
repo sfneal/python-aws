@@ -14,8 +14,6 @@ jobs:
                     3.9-buster,
                     3.10-alpine,
                     3.10-buster,
-                    3.10-rc-alpine,
-                    3.10-rc-buster,
                     3.11-alpine,
                     3.11-buster,
                     3.12-alpine,

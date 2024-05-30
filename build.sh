@@ -19,8 +19,6 @@ if [ "$TAG" != null ]
     docker build -t stephenneal/python-aws:3.9-buster "${DIR}"/3.9-buster/
     docker build -t stephenneal/python-aws:3.10-alpine "${DIR}"/3.10-alpine/
     docker build -t stephenneal/python-aws:3.10-buster "${DIR}"/3.10-buster/
-    docker build -t stephenneal/python-aws:3.10-rc-alpine "${DIR}"/3.10-rc-alpine/
-    docker build -t stephenneal/python-aws:3.10-rc-buster "${DIR}"/3.10-rc-buster/
     docker build -t stephenneal/python-aws:3.11-alpine "${DIR}"/3.11-alpine/
     docker build -t stephenneal/python-aws:3.11-buster "${DIR}"/3.11-buster/
     docker build -t stephenneal/python-aws:3.12-alpine "${DIR}"/3.12-alpine/
