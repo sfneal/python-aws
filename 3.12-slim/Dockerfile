@@ -2,7 +2,7 @@
 FROM python:3.12-slim
 
 # Copy python dependencies list
-COPY ./scripts/ /
+COPY ./ /
 
 # Install requirements
 RUN pip install --upgrade pip \

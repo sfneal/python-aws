@@ -2,7 +2,7 @@
 FROM python:3.9-buster
 
 # Copy python dependencies list
-COPY ./scripts/ /
+COPY ./ /
 
 # Install requirements
 RUN pip install --upgrade pip \

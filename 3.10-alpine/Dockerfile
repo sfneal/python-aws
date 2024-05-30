@@ -8,7 +8,7 @@ RUN apk update \
 
 
 # Copy python dependencies list
-COPY ./scripts/ /
+COPY ./ /
 
 # Install requirements & remove build deps
 RUN pip install --upgrade pip \
