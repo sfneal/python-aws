@@ -1,4 +1,4 @@
-awscli==1.32.80
+-r requirements-base.txt
 botocore==1.34.80
 colorama==0.4.4
 docutils==0.16
