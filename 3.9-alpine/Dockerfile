@@ -15,5 +15,6 @@ COPY ./ /
 # Install requirements & remove build deps
 RUN pip install --upgrade pip \
 	&& pip install --no-cache-dir -r ./requirements.txt \
-	&& rm ./requirements.txt \
+	&& rm ./requirements-base.txt \
+    && rm ./requirements.txt \
 	&& apk del .build-deps
