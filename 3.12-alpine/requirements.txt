@@ -8,7 +8,7 @@ python-dateutil==2.9.0.post0
 PyYAML==6.0.1
 rsa==4.7.2
 s3transfer==0.10.2
-setuptools==72.0.0
+setuptools==72.1.0
 six>=1.16.0
 urllib3==2.2.2
 wheel==0.43.0
