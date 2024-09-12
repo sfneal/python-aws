@@ -10,5 +10,5 @@ rsa==4.7.2
 s3transfer==0.10.2
 setuptools==74.1.2
 six>=1.16.0
-urllib3==2.2.2
+urllib3==2.2.3
 wheel==0.44.0
