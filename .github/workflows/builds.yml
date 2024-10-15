@@ -19,6 +19,9 @@ jobs:
                     3.12-alpine,
                     3.12-bullseye,
                     3.12-slim,
+                    3.13-alpine,
+                    3.13-bullseye,
+                    3.13-slim,
                 ]
 
         name: TAG-${{ matrix.tag }}
