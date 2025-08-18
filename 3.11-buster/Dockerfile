@@ -1,6 +1,9 @@
 # Start with release canidate buster image
 FROM python:3.11-buster
 
+# Update source list
+RUN echo "deb http://archive.debian.org/debian stretch main contrib non-free" > /etc/apt/sources.list
+
 # Update operating system & install system packages
 RUN apt-get update \
     && apt-get install -y \
